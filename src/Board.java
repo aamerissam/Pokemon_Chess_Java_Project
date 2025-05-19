@@ -33,63 +33,57 @@ public class Board {
 
         // Player 1: Rows 0-2
         System.out.println("Player 1: Placing Pokémon in rows 0-2...");
-        // Row 0: [39, 44, 45, 90, 106, 90, 45, 44, 39]
-        placePokemon(4, 0, 0, player1Pokemons);  // Salamèche (39)
-        placePokemon(7, 0, 1, player1Pokemons);  // Carapuce (44)
-        placePokemon(1, 0, 2, player1Pokemons);  // Bulbizarre (45)
-        placePokemon(149, 0, 3, player1Pokemons); // Dragonite (91, using as 90)
-        placePokemon(150, 0, 4, player1Pokemons); // Mewtwo (106)
-        placePokemon(149, 0, 5, player1Pokemons); // Dragonite (91, using as 90)
-        placePokemon(1, 0, 6, player1Pokemons);  // Bulbizarre (45)
-        placePokemon(7, 0, 7, player1Pokemons);  // Carapuce (44)
-        placePokemon(4, 0, 8, player1Pokemons);  // Salamèche (39)
+        placePokemon(4, 0, 0, player1Pokemons, "Player 1");  // Salamèche (39)
+        placePokemon(7, 0, 1, player1Pokemons, "Player 1");  // Carapuce (44)
+        placePokemon(1, 0, 2, player1Pokemons, "Player 1");  // Bulbizarre (45)
+        placePokemon(149, 0, 3, player1Pokemons, "Player 1"); // Dragonite (91)
+        placePokemon(150, 0, 4, player1Pokemons, "Player 1"); // Mewtwo (106)
+        placePokemon(149, 0, 5, player1Pokemons, "Player 1"); // Dragonite (91)
+        placePokemon(1, 0, 6, player1Pokemons, "Player 1");  // Bulbizarre (45)
+        placePokemon(7, 0, 7, player1Pokemons, "Player 1");  // Carapuce (44)
+        placePokemon(4, 0, 8, player1Pokemons, "Player 1");  // Salamèche (39)
 
-        // Row 1: [58, 59, 60, 91, 90, 91, 60, 59, 58]
-        placePokemon(5, 1, 0, player1Pokemons);  // Reptincel (58)
-        placePokemon(8, 1, 1, player1Pokemons);  // Carabaffe (59)
-        placePokemon(2, 1, 2, player1Pokemons);  // Herbizarre (60)
-        placePokemon(148, 1, 3, player1Pokemons); // Dracolosse (91)
-        placePokemon(145, 1, 4, player1Pokemons); // Électhor (90)
-        placePokemon(148, 1, 5, player1Pokemons); // Dracolosse (91)
-        placePokemon(2, 1, 6, player1Pokemons);  // Herbizarre (60)
-        placePokemon(8, 1, 7, player1Pokemons);  // Carabaffe (59)
-        placePokemon(5, 1, 8, player1Pokemons);  // Reptincel (58)
+        placePokemon(5, 1, 0, player1Pokemons, "Player 1");  // Reptincel (58)
+        placePokemon(8, 1, 1, player1Pokemons, "Player 1");  // Carabaffe (59)
+        placePokemon(2, 1, 2, player1Pokemons, "Player 1");  // Herbizarre (60)
+        placePokemon(148, 1, 3, player1Pokemons, "Player 1"); // Dracolosse (91)
+        placePokemon(145, 1, 4, player1Pokemons, "Player 1"); // Électhor (90)
+        placePokemon(148, 1, 5, player1Pokemons, "Player 1"); // Dracolosse (91)
+        placePokemon(2, 1, 6, player1Pokemons, "Player 1");  // Herbizarre (60)
+        placePokemon(8, 1, 7, player1Pokemons, "Player 1");  // Carabaffe (59)
+        placePokemon(5, 1, 8, player1Pokemons, "Player 1");  // Reptincel (58)
 
-        // Row 2: [0, 0, 0, 80, 79, 78, 0, 0, 0]
-        placePokemon(3, 2, 3, player1Pokemons);  // Florizarre (80)
-        placePokemon(9, 2, 4, player1Pokemons);  // Tortank (79)
-        placePokemon(6, 2, 5, player1Pokemons);  // Dracaufeu (78)
+        placePokemon(3, 2, 3, player1Pokemons, "Player 1");  // Florizarre (80)
+        placePokemon(9, 2, 4, player1Pokemons, "Player 1");  // Tortank (79)
+        placePokemon(6, 2, 5, player1Pokemons, "Player 1");  // Dracaufeu (78)
 
         player1Mewtwo = grid[0][4]; // Mewtwo at (0,4)
 
         // Player 2: Rows 6-8
         System.out.println("Player 2: Placing Pokémon in rows 6-8...");
-        // Row 6: [0, 0, 0, 78, 79, 80, 0, 0, 0]
-        placePokemon(6, 6, 3, player2Pokemons);  // Dracaufeu (78)
-        placePokemon(9, 6, 4, player2Pokemons);  // Tortank (79)
-        placePokemon(3, 6, 5, player2Pokemons);  // Florizarre (80)
+        placePokemon(6, 6, 3, player2Pokemons, "Player 2");  // Dracaufeu (78)
+        placePokemon(9, 6, 4, player2Pokemons, "Player 2");  // Tortank (79)
+        placePokemon(3, 6, 5, player2Pokemons, "Player 2");  // Florizarre (80)
 
-        // Row 7: [58, 59, 60, 91, 90, 91, 60, 59, 58]
-        placePokemon(5, 7, 0, player2Pokemons);  // Reptincel (58)
-        placePokemon(8, 7, 1, player2Pokemons);  // Carabaffe (59)
-        placePokemon(2, 7, 2, player2Pokemons);  // Herbizarre (60)
-        placePokemon(148, 7, 3, player2Pokemons); // Dracolosse (91)
-        placePokemon(145, 7, 4, player2Pokemons); // Électhor (90)
-        placePokemon(148, 7, 5, player2Pokemons); // Dracolosse (91)
-        placePokemon(2, 7, 6, player2Pokemons);  // Herbizarre (60)
-        placePokemon(8, 7, 7, player2Pokemons);  // Carabaffe (59)
-        placePokemon(5, 7, 8, player2Pokemons);  // Reptincel (58)
+        placePokemon(5, 7, 0, player2Pokemons, "Player 2");  // Reptincel (58)
+        placePokemon(8, 7, 1, player2Pokemons, "Player 2");  // Carabaffe (59)
+        placePokemon(2, 7, 2, player2Pokemons, "Player 2");  // Herbizarre (60)
+        placePokemon(148, 7, 3, player2Pokemons, "Player 2"); // Dracolosse (91)
+        placePokemon(145, 7, 4, player2Pokemons, "Player 2"); // Électhor (90)
+        placePokemon(148, 7, 5, player2Pokemons, "Player 2"); // Dracolosse (91)
+        placePokemon(2, 7, 6, player2Pokemons, "Player 2");  // Herbizarre (60)
+        placePokemon(8, 7, 7, player2Pokemons, "Player 2");  // Carabaffe (59)
+        placePokemon(5, 7, 8, player2Pokemons, "Player 2");  // Reptincel (58)
 
-        // Row 8: [39, 44, 45, 90, 106, 90, 45, 44, 39]
-        placePokemon(4, 8, 0, player2Pokemons);  // Salamèche (39)
-        placePokemon(7, 8, 1, player2Pokemons);  // Carapuce (44)
-        placePokemon(1, 8, 2, player2Pokemons);  // Bulbizarre (45)
-        placePokemon(149, 8, 3, player2Pokemons); // Dragonite (91, using as 90)
-        placePokemon(150, 8, 4, player2Pokemons); // Mewtwo (106)
-        placePokemon(149, 8, 5, player2Pokemons); // Dragonite (91, using as 90)
-        placePokemon(1, 8, 6, player2Pokemons);  // Bulbizarre (45)
-        placePokemon(7, 8, 7, player2Pokemons);  // Carapuce (44)
-        placePokemon(4, 8, 8, player2Pokemons);  // Salamèche (39)
+        placePokemon(4, 8, 0, player2Pokemons, "Player 2");  // Salamèche (39)
+        placePokemon(7, 8, 1, player2Pokemons, "Player 2");  // Carapuce (44)
+        placePokemon(1, 8, 2, player2Pokemons, "Player 2");  // Bulbizarre (45)
+        placePokemon(149, 8, 3, player2Pokemons, "Player 2"); // Dragonite (91)
+        placePokemon(150, 8, 4, player2Pokemons, "Player 2"); // Mewtwo (106)
+        placePokemon(149, 8, 5, player2Pokemons, "Player 2"); // Dragonite (91)
+        placePokemon(1, 8, 6, player2Pokemons, "Player 2");  // Bulbizarre (45)
+        placePokemon(7, 8, 7, player2Pokemons, "Player 2");  // Carapuce (44)
+        placePokemon(4, 8, 8, player2Pokemons, "Player 2");  // Salamèche (39)
 
         player2Mewtwo = grid[8][4]; // Mewtwo at (8,4)
 
@@ -100,8 +94,9 @@ public class Board {
         setupGUI();
     }
 
-    private void placePokemon(int pokedexNum, int row, int col, List<Pokemon> pokemons) {
+    private void placePokemon(int pokedexNum, int row, int col, List<Pokemon> pokemons, String owner) {
         Pokemon pokemon = new Pokemon(pokedexNum, null);
+        pokemon.setOwner(owner);
         grid[row][col] = pokemon;
         pokemons.add(pokemon);
         System.out.println("Placed " + pokemon.getName() + " (#" + pokemon.getPokedexNumber() + ") at (" + row + "," + col + ")");
@@ -117,11 +112,9 @@ public class Board {
             if (input.equalsIgnoreCase("done")) {
                 if (placed < TOTAL_POKEMON_PER_PLAYER) {
                     System.out.println("Warning: Only " + placed + " Pokémon placed. Auto-filling remaining " + (TOTAL_POKEMON_PER_PLAYER - placed) + " slots with defaults.");
-                    // Removed auto-fill logic since we're using precise placement
                 }
                 break;
             } else if (input.equalsIgnoreCase("fill")) {
-                // Removed auto-fill logic
                 break;
             }
             String[] parts = input.split(" ");
@@ -143,6 +136,7 @@ public class Board {
                     continue;
                 }
                 Pokemon pokemon = new Pokemon(pokedexNum, name);
+                pokemon.setOwner(player);
                 grid[row][col] = pokemon;
                 pokemons.add(pokemon);
                 System.out.println("Placed " + pokemon.getName() + " (#" + pokemon.getPokedexNumber() + ") at (" + row + "," + col + ") for " + player);
@@ -195,11 +189,13 @@ public class Board {
                         ImageIcon icon = new ImageIcon("..\\images\\" + grid[i][j].getPokedexNumber() + ".png");
                         Image img = icon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
                         label.setIcon(new ImageIcon(img));
-                        label.setText("<html><center>" + grid[i][j].getName() + "<br><font color='red'>" + grid[i][j].getPv() + "</font></center></html>");
+                        String color = "Player 1".equals(grid[i][j].getOwner()) ? "red" : "green";
+                        label.setText("<html><center>" + grid[i][j].getName() + "<br><font color='" + color + "'>" + grid[i][j].getPv() + "</font></center></html>");
                         label.setBackground(selectedPokemon == grid[i][j] ? Color.YELLOW : ((i + j) % 2 == 0 ? Color.LIGHT_GRAY : Color.WHITE));
                         System.out.println("Image Loaded for " + grid[i][j].getName() + " at (" + i + "," + j + "): " + grid[i][j].getPokedexNumber() + ".png");
                     } catch (Exception e) {
-                        label.setText("<html><center>" + grid[i][j].getName().charAt(0) + "<br><font color='red'>" + grid[i][j].getPv() + "</font></center></html>");
+                        String color = "Player 1".equals(grid[i][j].getOwner()) ? "red" : "green";
+                        label.setText("<html><center>" + grid[i][j].getName().charAt(0) + "<br><font color='" + color + "'>" + grid[i][j].getPv() + "</font></center></html>");
                         label.setIcon(null);
                         label.setBackground(selectedPokemon == grid[i][j] ? Color.YELLOW : ((i + j) % 2 == 0 ? Color.LIGHT_GRAY : Color.WHITE));
                         System.out.println("Failed to Load Image for " + grid[i][j].getName() + " at (" + i + "," + j + "): Using initial '" + grid[i][j].getName().charAt(0) + "'. Error: " + e.getMessage());
@@ -219,15 +215,25 @@ public class Board {
         System.out.println("Click Detected at (" + row + "," + col + ")");
         if (selectedPokemon == null) {
             Pokemon clickedPokemon = grid[row][col];
-            if (clickedPokemon != null && ((player1Turn && player1Pokemons.contains(clickedPokemon)) || (!player1Turn && player2Pokemons.contains(clickedPokemon)))) {
-                selectedPokemon = clickedPokemon;
-                selectedRow = row;
-                selectedCol = col;
-                System.out.println("Selected Pokémon: " + selectedPokemon.getName() + " at (" + row + "," + col + ") by " + (player1Turn ? "Player 1" : "Player 2"));
-                updateBoard();
-                JOptionPane.showMessageDialog(frame, "Selected " + selectedPokemon.getName() + "\nChoose an action: Move or Attack.");
+            if (clickedPokemon != null) {
+                System.out.println("Clicked Pokémon: " + clickedPokemon.getName() + " (#" + clickedPokemon.getPokedexNumber() + "), Owner: " + clickedPokemon.getOwner());
+                boolean isPlayer1Pokemon = player1Pokemons.contains(clickedPokemon);
+                boolean isPlayer2Pokemon = player2Pokemons.contains(clickedPokemon);
+                System.out.println("Contains Check - Player 1 Pokemons: " + isPlayer1Pokemon + ", Player 2 Pokemons: " + isPlayer2Pokemon);
+                System.out.println("Current Turn: " + (player1Turn ? "Player 1" : "Player 2") + ", Expected Selection: " + (player1Turn ? "Player 1 Pokémon" : "Player 2 Pokémon"));
+                if ((player1Turn && isPlayer1Pokemon) || (!player1Turn && isPlayer2Pokemon)) {
+                    selectedPokemon = clickedPokemon;
+                    selectedRow = row;
+                    selectedCol = col;
+                    System.out.println("Selection Allowed: " + selectedPokemon.getName() + " selected at (" + row + "," + col + ") by " + (player1Turn ? "Player 1" : "Player 2"));
+                    updateBoard();
+                    JOptionPane.showMessageDialog(frame, "Selected " + selectedPokemon.getName() + "\nChoose an action: Move or Attack.");
+                } else {
+                    System.out.println("Selection Blocked: Cannot select " + clickedPokemon.getName() + " (owned by " + clickedPokemon.getOwner() + ") during " + (player1Turn ? "Player 1" : "Player 2") + "'s turn.");
+                    JOptionPane.showMessageDialog(frame, "Cannot select opponent's Pokémon during your turn!");
+                }
             } else {
-                System.out.println("Invalid Selection: No Pokémon at (" + row + "," + col + ") or not your Pokémon.");
+                System.out.println("Invalid Selection: No Pokémon at (" + row + "," + col + ").");
             }
         } else {
             System.out.println("Action Selection for " + selectedPokemon.getName() + " at (" + selectedRow + "," + selectedCol + ")");

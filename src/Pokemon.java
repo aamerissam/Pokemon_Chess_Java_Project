@@ -12,6 +12,7 @@ public class Pokemon {
     private int att; // Attack
     private int def; // Defense
     private int vit; // Speed
+    private String owner; // New field to track ownership
 
     // Default constructor (MissingNo)
     public Pokemon() {
@@ -23,6 +24,7 @@ public class Pokemon {
         this.att = 136;
         this.def = 0;
         this.vit = 29;
+        this.owner = null;
         System.out.println("Created Default Pokémon: MissingNo (#0)");
     }
 
@@ -36,6 +38,7 @@ public class Pokemon {
         this.att = att;
         this.def = def;
         this.vit = vit;
+        this.owner = null;
         System.out.println("Created Pokémon: " + this.name + " (#" + this.pokedexNumber + ") with manual stats.");
     }
 
@@ -49,6 +52,7 @@ public class Pokemon {
         this.att = 0;
         this.def = 0;
         this.vit = 0;
+        this.owner = null;
 
         System.out.println("Attempting to Load Pokémon Data for #" + pokedexNumber + " (" + this.name + ") from pokedex_gen1.csv...");
         try (BufferedReader br = new BufferedReader(new FileReader("..\\pokedex_gen1.csv"))) {
@@ -87,11 +91,17 @@ public class Pokemon {
     public int getAtt() { return att; }
     public int getDef() { return def; }
     public int getVit() { return vit; }
+    public String getOwner() { return owner; }
 
-    // Setters (only for PV as it changes during combat)
+    // Setters
     public void setPv(int pv) {
         this.pv = pv;
         System.out.println(this.name + " HP Updated to: " + this.pv);
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+        System.out.println(this.name + " Owner Set to: " + this.owner);
     }
 
     // Attack method considering type effectiveness
@@ -119,7 +129,7 @@ public class Pokemon {
         JOptionPane.showMessageDialog(frame, this.name + " attacks " + other.name + " for " + finalDamage + " damage!");
     }
 
-    // Equals method
+    // Equals method (updated to compare owner as well)
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -127,12 +137,7 @@ public class Pokemon {
         Pokemon other = (Pokemon) obj;
         return this.pokedexNumber == other.pokedexNumber &&
                 this.name.equals(other.name) &&
-                this.type1 == other.type1 &&
-                this.type2 == other.type2 &&
-                this.pv == other.pv &&
-                this.att == other.att &&
-                this.def == other.def &&
-                this.vit == other.vit;
+                (this.owner == null ? other.owner == null : this.owner.equals(other.owner));
     }
 
     // toString method
